@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temprature Conversion Program</title>
+    <link rel="stylesheet" href="temp_conv.css">
+</head>
+
+<body>
+    <div class="Container">
+        <div id="fireandice"><h1 id="fire">🔥</h1> <h1 id="ice">❄️</h1></div>
+       <div id="header" ><h1 >Temprature Conversion</h1></div> 
+        <input type="radio" id="fahrenheitTocelsius" required name="temp">
+        <label id="ftoc">Fahrenheit to Celsius</label> <br>
+        <input type="radio" id="Celsiustofahrenheit" name="temp"> 
+        <label id="ctof">Celsius to Fahrenheit</label> <br>
+        <button onclick="swap()" id="swap"  title="Swap Conversion">🔁</button>
+        <input type="number" id="userinput" required placeholder="Insert Value"> <br>
+       <div  id="answer" ><label></label> <br></div> 
+       <button onclick="convert()" id="convertBtn">Convert</button>
+        <button  onclick="reset()" id="resetBtn" >Reset</button>
+        
+        <script src="temp_conv.js" ></script>
+    </div>
+</body>
+</html>
