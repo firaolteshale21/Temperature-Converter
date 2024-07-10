@@ -1,113 +1,136 @@
-body{
-    background-color: hsla(0, 14%, 93%, 0.911);
-}
-.Container #header{
-    text-align: center;
-    font-size: 0.9em;
-    margin-top: -50px;
-    color: rgb(26, 197, 197);
-}
 body {
+    background-color: #f0f8ff;
+    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
+    margin: 0;
 }
-  .Container {
-    background-color: rgb(255, 255, 255);
+
+.container {
+    background-color: #ffffff;
     text-align: center;
-    font-size: 2em;
-    border: 2px solid rgb(134, 99, 99);
-    width: fit-content;
     padding: 50px;
-    box-shadow: hsla(12, 14%, 93%, 0.973);
-  }
-.Container #userinput{
-    font-size: 1em;
-    width: 100px;
-    margin-top: 25px;
-    margin-bottom: 0px;
-    margin-left: -20px;
-}
-.Container #userinput::placeholder{
-    font-size: 0.5em;
-    text-align: center;
-}
-.Container #userinput::-webkit-inner-spin-button,
-::-webkit-outer-spin-button{
-    display: none;
-}
-.Container #ctof,.Container #ftoc{
-    font-size: 0.8em;
-}
-.Container #answer{
-    margin-top: 5px;
-    font-size: 80%;
-}
-button{
-    margin-top: 25px;
-    font-size: 50%;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 1px solid;
     border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
 }
- #convertBtn:hover{
-    cursor: pointer;
-    background-color: rgb(109, 209, 109);
- }
- #resetBtn:hover{
-    cursor: pointer;
-    background-color: white;
- }
 
- #swap {
-   background: none;
-   border: none;
-   font-size: inherit;
-   cursor: pointer;
-   margin-left: -50px;
- }
- #swap:hover{
-    transform: scale(1.3,1.3);
- }
+#header h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #1a8c97;
+}
 
-#fireandice{
+#fireandice {
     display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-#ice{
-    position: relative;
-    margin-left: 60%;
-    animation: icerotate 4s linear infinite;
+#fireandice i {
+    font-size: 3em;
+    margin: 0 15px;
 }
- @keyframes icerotate {
+
+#fire {
+    color: #ff4500;
+    animation: flame 1s infinite alternate;
+}
+
+#ice {
+    color: #1e90ff;
+    animation: rotate 2s infinite linear;
+}
+
+@keyframes flame {
     0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(180deg);
-      }
-        100%{
-            transform: rotate(360deg);
-        }
- }
- #fire {
-    position: relative;
-    animation: burnAnimation 2s ease-in-out infinite;
-  }
-  
-  @keyframes burnAnimation {
-    0% {
-      opacity: 0.5;
-      transform: scale(1);
+        transform: scale(1);
+        opacity: 0.8;
     }
     50% {
-      opacity: 1;
-      transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 1;
     }
     100% {
-      opacity: 0.5;
-      transform: scale(1);
+        transform: scale(1);
+        opacity: 0.8;
     }
-  }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.radio-group label {
+    font-size: 1em;
+    color: #333;
+}
+
+#userinput {
+    font-size: 1.2em;
+    width: 80%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#convertBtn {
+    background-color: #28a745;
+    color: white;
+}
+
+#convertBtn:hover {
+    background-color: #218838;
+}
+
+#resetBtn {
+    background-color: #dc3545;
+    color: white;
+}
+
+#resetBtn:hover {
+    background-color: #c82333;
+}
+
+#swap {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-top: -20px;
+    color: #007bff;
+}
+
+#swap:hover {
+    color: #0056b3;
+}
+
+#answer {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 20px;
+}

@@ -15,7 +15,7 @@ function convert() {
     temp = (userInput * 9 / 5) + 32;
     answer.textContent = temp.toFixed(1) + " °F";
   }else if(isNaN(userInput)){
-    answer.textContent = "Empty Input";
+    answer.textContent = "Please Insert Value to be Converted";
     answer.style.color = 'red';
   }
   else{
